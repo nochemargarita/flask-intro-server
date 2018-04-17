@@ -13,6 +13,10 @@ AWESOMENESS = [
     'oh-so-not-meh', 'brilliant', 'ducky', 'coolio', 'incredible',
     'wonderful', 'smashing', 'lovely']
 
+YOU_BAD = [
+    'ugly', 'sad', 'weirdo', 'boring', 'bad at parking', 'look funny', 'terrible',
+    'scary', 'a bad friend', 'a party pooper', 'a bad cook']
+
 
 @app.route('/')
 def start_here():
@@ -57,6 +61,10 @@ def say_hello():
     </html>
     """
 
+@app.route('/diss')
+def get_diss():
+  """stuff here after lunch"""
+  diss = request.args.get()
 
 @app.route('/greet')
 def greet_person():
